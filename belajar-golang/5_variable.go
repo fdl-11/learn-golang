@@ -30,10 +30,12 @@ func main() {
 	// =================================================================
 
 	var (
-		firstName = "Fadli"
+		firstName string = "Fadli"
 		lastName  = "Darusalam"
+		num int = 0
 	)
 
 	fmt.Println(firstName)
 	fmt.Println(lastName)
+	fmt.Println(num)
 }

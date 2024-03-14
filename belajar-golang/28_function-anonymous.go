@@ -22,9 +22,10 @@ func registerUser(name string, blackList BlackList) {
 
 func main() {
 	blackList := func(name string) bool {
-		return name == "admin"
+		return name == "admin" || name == "root"
 	}
 
 	registerUser("admin", blackList)
 	registerUser("Fadli", blackList)
+	registerUser("root", blackList)
 }

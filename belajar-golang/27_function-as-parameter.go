@@ -10,12 +10,10 @@ import "strings"
 
 type Filter func(string) string
 
-func sayHelloWithFilter(name string, filter Filter) {
+func sayHelloWithFilter(name string, filter Filter) string {
 	nameFiltered := filter(name)
 
-	// sayHelloWithFilter(nameFiltered, upperFilter)
-	
-	fmt.Println("Hello", nameFiltered)
+	return nameFiltered
 }
 
 func spamFilter(name string) string {
@@ -32,9 +30,26 @@ func upperFilter(name string) string {
 }
 
 func main() {
-	sayHelloWithFilter("Fadli", spamFilter)
-	sayHelloWithFilter("Anjing", spamFilter)
+	name1 := "Fadli"
+	name2 := "Anjing"
 
-	filter := spamFilter
-	sayHelloWithFilter("Tes", filter)
+	// Original name
+	fmt.Println(name1)
+	fmt.Println(name2)
+	
+	fmt.Println()
+	
+	// SpamFilter
+	name1 = sayHelloWithFilter(name1, spamFilter)
+	name2 = sayHelloWithFilter(name2, spamFilter)
+	
+	fmt.Println(name1)
+	fmt.Println(name2)
+	
+	fmt.Println()
+
+    // UpperFilter
+	fmt.Println(sayHelloWithFilter(name1, upperFilter))
+	fmt.Println(sayHelloWithFilter(name2, upperFilter))
+
 }

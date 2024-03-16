@@ -8,7 +8,8 @@ import "fmt"
 
 func endApp() {
 	message := recover()
-
+	
+	// Kalau tidak ada error, nilai defaultnya nil
 	if message != nil {
 		fmt.Println("Error dengan message:", message)
 	}

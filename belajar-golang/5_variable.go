@@ -24,7 +24,7 @@ func main() {
 	country := "Indonesia"	//":="" adalah pengganti var (hanya untuk inisiasi awal)
 	fmt.Println(country)
 
-	country = "Japan"
+	country = "Japan"		// tanda ":= hanya bisa untuk inisiasi, ketika mengganti data hanya pakai "=" biasa"
 	fmt.Println(country)
 
 	// =================================================================

@@ -16,7 +16,7 @@ func main() {
 	var name = "Fadli"
 	var e byte = name[0] // byte = uint8, ketika ambil satu karakter, maka bentuknya byte
 	var eString string = string(e)
-	var x = string(name[2])
+	var x = string(name[2])	// sama saja
 
 	fmt.Println(e)
 	fmt.Println(eString)

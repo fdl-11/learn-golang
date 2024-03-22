@@ -13,6 +13,18 @@ package helper
 
 import "fmt"
 
+// Tidak bisa diakses dari luar package
+var version = 1
+
+// Bisa diakses dari luar package
+var Application = "Belajar Golang"
+
+// Bisa diakses dari luar package
 func SayHello(name string) {
 	fmt.Println("Hello " + name)
+}
+
+// Tidak bisa diakses dari luar packag
+func sayGoodBye(name string) {
+	fmt.Println("Good Bye " + name)
 }
